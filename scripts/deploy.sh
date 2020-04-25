@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPOSITORY=/home/ec2-user/app/step2
-PROJECT_NAME=com.yuleka.app
+PROJECT_NAME=garageon
 
 echo "> Build file copy"
 
@@ -9,7 +9,7 @@ cp $REPOSITORY/zip/*.jar $REPOSITORY/
 
 echo "> Now pid"
 
-CURRENT_PID=$(pgrep -fl com.yuleka.app | grep jar | awk '{print $1}')
+CURRENT_PID=$(pgrep -fl garageon | grep jar | awk '{print $1}')
 
 echo "> Now pid: $CURRENT_PID"
 

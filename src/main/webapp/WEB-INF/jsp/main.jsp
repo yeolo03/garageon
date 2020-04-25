@@ -8,6 +8,7 @@
 <body>
     <h1>[테스트] jsp 연결 / CSS / 모델뷰 ${projectVer}</h1>
     <button type="button" id="btn-save">자바스크립트 테스트</button>
+    <h1>소스 변경 확인</h1>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="/js/index.js"></script>

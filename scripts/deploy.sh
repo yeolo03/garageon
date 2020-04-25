@@ -5,11 +5,11 @@ PROJECT_NAME=garageon
 
 echo "> Build file copy"
 
-cp $REPOSITORY/zip/*.jar $REPOSITORY/
+cp $REPOSITORY/zip/*.war $REPOSITORY/
 
 echo "> Now pid"
 
-CURRENT_PID=$(pgrep -fl garageon | grep jar | awk '{print $1}')
+CURRENT_PID=$(pgrep -fl garageon | grep war | awk '{print $1}')
 
 echo "> Now pid: $CURRENT_PID"
 
@@ -23,7 +23,7 @@ fi
 
 echo "> New Application Deploy"
 
-JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
+JAR_NAME=$(ls -tr $REPOSITORY/*.war | tail -n 1)
 
 echo "> JAR Name: $JAR_NAME"
 

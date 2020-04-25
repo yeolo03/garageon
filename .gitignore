@@ -4,3 +4,7 @@
 /build/classes/java/main/
 /build/classes/java/test/
 .idea
+/.classpath
+/.settings/
+/bin/
+/.project

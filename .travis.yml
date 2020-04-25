@@ -55,3 +55,9 @@ deploy:
 
     region: ap-northeast-2
     wait-until-deployed: true
+
+ # CI 실행완료시 메일로 알림
+notifications:
+  email:
+    recipients:
+      - dydqud@gmail.com

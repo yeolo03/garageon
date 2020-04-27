@@ -86,7 +86,7 @@
 								<img src="img/hero-bg.png" alt="">
 							</div>
 						</div>
-					</div>
+					</div>	
 				</div>
 			</div>
 			<div class="hs-item">

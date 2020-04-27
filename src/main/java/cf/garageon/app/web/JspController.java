@@ -10,6 +10,6 @@ public class JspController {
     @RequestMapping("/")
     public String jsp(Model model) throws Exception {
         model.addAttribute("projectVer", "v1.2");
-        return "index.html";
+        return "index.jsp";
     }
 }

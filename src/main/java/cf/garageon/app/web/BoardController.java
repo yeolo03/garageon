@@ -42,10 +42,6 @@ import cf.garageon.app.VO.*;
 
 @Controller
 public class BoardController {
-	   @RequestMapping("/")
-	    public String jsp(Model model) throws Exception {
-	    model.addAttribute("projectVer", "v1.2");
-	    return "index";}
 private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 	
 	@Inject	

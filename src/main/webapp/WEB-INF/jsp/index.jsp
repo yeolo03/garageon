@@ -60,7 +60,7 @@
 				
 				</ul>
 			</li>
-			<li><a href="qna_list">QNA</a></li>
+			<li><a href="qna/qna_list">QNA</a></li>
 			
 			
 			

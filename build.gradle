@@ -27,7 +27,7 @@ repositories {
     mavenCentral()
     jcenter()
     //ojdbc
-    maven { url "https://code.lds.org/nexus/content/groups/main-repo"} 
+     maven { url "https://code.lds.org/nexus/content/groups/main-repo"} 
     //lombok	
     maven { url "https://plugins.gradle.org/m2/" }
 
@@ -37,8 +37,12 @@ repositories {
 dependencies {
 	providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
     compile'org.springframework.boot:spring-boot-starter-web'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testCompile'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.projectlombok:lombok'
   	compile("org.springframework.boot:spring-boot-starter-security")
+  	compile('org.springframework.boot:spring-boot-devtools')
+    compile('org.apache.tomcat.embed:tomcat-embed-jasper')
   	compile group: 'javax.inject', name: 'javax.inject', version: '1'
 	compile group: 'org.springframework.security', name: 'spring-security-taglibs', version: '5.0.6.RELEASE'
 	compile group: 'net.coobird', name: 'thumbnailator', version: '0.4.8'

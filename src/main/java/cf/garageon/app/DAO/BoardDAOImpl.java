@@ -13,8 +13,6 @@ import cf.garageon.app.VO.Criteria;
 import cf.garageon.app.VO.SearchCriteria;
 
 
-
-
 @Repository
 public class BoardDAOImpl implements BoardDAO{
 	@Inject

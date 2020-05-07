@@ -9,7 +9,6 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
         classpath 'org.springframework:springloaded:1.2.6.RELEASE'
-       
     }
 }
 
@@ -41,17 +40,11 @@ dependencies {
     compile('javax.servlet:jstl:1.2')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     compile 'com.oracle:ojdbc6:11.2.0.4'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
- 	testImplementation 'org.springframework.boot:spring-boot-starter-test'	
     implementation 'org.projectlombok:lombok'
-    compile('com.fasterxml.jackson.module:jackson-module-kotlin')
     compile('org.springframework.boot:spring-boot-devtools')
-    compile('org.apache.tomcat.embed:tomcat-embed-jasper')
   	compile("org.springframework.boot:spring-boot-starter-security")
 	compile group: 'org.springframework.security', name: 'spring-security-taglibs', version: '5.0.6.RELEASE'
 	compile('org.springframework.boot:spring-boot-starter-jdbc')
-	compile('javax.servlet:jstl')
 	    
 	    
 	    /*lombok*/

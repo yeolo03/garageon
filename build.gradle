@@ -58,7 +58,7 @@ dependencies {
 	    compile('org.apache.tomcat.embed:tomcat-embed-jasper')
 	    
 	     /* oracle jdbc driver */
-	    compile group: 'oracle', name: 'ojdbc6', version: '11.2.0.3'  
+	    compile 'com.oracle:ojdbc6:11.2.0.3'   
 	        
 	    /*mybais*/
 	    compile("org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2")

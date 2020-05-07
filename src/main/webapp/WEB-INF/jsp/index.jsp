@@ -77,7 +77,7 @@
 						<div class="col-lg-6">
 							<div class="hs-text">
 								<h2><span>Find</span> What you want.</h2>
-								<p>sss<br> Don't hesitate you just use this webpage. </p>
+								<p>sss instrument and cheap,<br> Don't hesitate you just use this webpage. </p>
 								
 							</div>
 						</div>

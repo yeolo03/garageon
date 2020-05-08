@@ -1,3 +1,4 @@
+/*
 package cf.garageon.app.config;
 
 import cf.garageon.app.Service.UserService;
@@ -28,3 +29,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers("/**").permitAll();
 	}
 }
+*/

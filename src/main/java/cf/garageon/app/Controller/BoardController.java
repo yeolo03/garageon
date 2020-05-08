@@ -428,7 +428,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 				
 				// 공지사항 게시판 목록 조회
 				@RequestMapping(value = "/notice_list", method = RequestMethod.GET)
-				public @ResponseBody String notice_list(Model model, @ModelAttribute("scri") SearchCriteria scri) throws Exception{
+				public String notice_list(Model model, @ModelAttribute("scri") SearchCriteria scri) throws Exception{
 					logger.info("list");
 					
 					model.addAttribute("list1",noticeService.notice_list(scri));

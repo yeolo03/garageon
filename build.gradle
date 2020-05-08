@@ -43,8 +43,8 @@ dependencies {
     compile'com.oracle:ojdbc6:11.2.0.4'
     compile'org.projectlombok:lombok:1.18.12'
 	annotationProcessor'org.projectlombok:lombok:1.18.12'
-    compile'org.springframework.boot:spring-boot-devtools'
-  	compile"org.springframework.boot:spring-boot-starter-security"
+    //compile'org.springframework.boot:spring-boot-devtools'
+  	//compile"org.springframework.boot:spring-boot-starter-security"
 	compile group: 'org.springframework.security', name: 'spring-security-taglibs', version: '5.0.6.RELEASE'
 	compile group: 'net.coobird', name: 'thumbnailator', version: '0.4.8'
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'

@@ -1,4 +1,4 @@
-package cf.garageon.app.web;
+package cf.garageon.app;
 
 import java.io.File;
 import java.net.URLEncoder;

@@ -1,4 +1,4 @@
-package cf.garageon.app.web;
+package cf.garageon.app;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;

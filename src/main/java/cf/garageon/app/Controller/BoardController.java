@@ -440,7 +440,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 					
 					model.addAttribute("pageMaker", pageMaker);
 					
-					return "notice/notice_list";
+					return "notice_list";
 					
 				}
 				

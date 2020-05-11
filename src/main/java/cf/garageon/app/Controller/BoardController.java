@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -39,7 +40,7 @@ import cf.garageon.app.util.UploadFileUtils;
 import cf.garageon.app.VO.*;
 
 
-@Controller
+@RestController
 public class BoardController {
 private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 	
@@ -61,7 +62,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 	
 	
 	@Resource(name="uploadPath")
-	private String uploadPath;
+	public String uploadPath;
 	
 	
 	

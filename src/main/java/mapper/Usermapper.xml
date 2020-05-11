@@ -6,7 +6,7 @@
      <mapper namespace="Usermapper">
      
      <!-- 로그인 -->
-	<select id="login" resultType="kr.koko.ex14.review.dto.UserVo">
+	<select id="login" resultType="cf.garageon.app.VO.UserVo">
 		SELECT user_Id, user_Password 
 		  FROM register
 		 WHERE user_Id = #{user_Id}

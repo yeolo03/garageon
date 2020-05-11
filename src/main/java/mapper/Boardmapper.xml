@@ -6,7 +6,7 @@
 
     <mapper namespace="Boardmapper">
     <!-- 후기게시판 조회 -->
-   <select id="list" resultType="kr.koko.ex14.review.dto.BoardVO" parameterType="kr.koko.ex14.review.dto.SearchCriteria">
+   <select id="list" resultType="cf.garageon.app.VO.BoardVO" parameterType="cf.garageon.app.VO.SearchCriteria">
 		SELECT  BNO, 
 		        TITLE, 
 		        CONTENT,
@@ -30,7 +30,7 @@
 	</select>
 	
 	 <!-- 후기게시판 총 게시물 수 조회(검색기능) -->
-	<select id="listCount" parameterType="kr.koko.ex14.review.dto.SearchCriteria" resultType="int">
+	<select id="listCount" parameterType="cf.garageon.app.VO.SearchCriteria" resultType="int">
 	SELECT COUNT(BNO)
 		   FROM MP_BOARD
 		   WHERE 1=1
@@ -48,7 +48,7 @@
 	</sql>
 	
 	<!-- 후기게시판 상세조회 -->
-<select id="read" parameterType="int" resultType="kr.koko.ex14.review.dto.BoardVO">
+<select id="read" parameterType="int" resultType="cf.garageon.app.VO.dto.BoardVO">
 		SELECT	BNO
 			  , TITLE
 			  , CONTENT
@@ -99,7 +99,7 @@
    
    
    <!-- 후기 게시판 글 수정 -->
-     <update id="modify" parameterType="kr.koko.ex14.review.dto.BoardVO">
+     <update id="modify" parameterType="cf.garageon.app.VO.BoardVO">
       update  MP_BOARD set title=#{title},
                           content=#{content},
                            review_Email=#{review_Email},

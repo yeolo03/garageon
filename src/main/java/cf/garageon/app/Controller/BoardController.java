@@ -40,7 +40,7 @@ import cf.garageon.app.util.UploadFileUtils;
 import cf.garageon.app.VO.*;
 
 
-@RestController
+@Controller
 public class BoardController {
 private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 	
@@ -122,7 +122,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 		}
 		
 		// 게시판 목록 조회
-		@RequestMapping(value = "/list", method = RequestMethod.GET)
+		@RequestMapping(value = "board/list", method = RequestMethod.GET)
 		public String list(Model model, @ModelAttribute("scri") SearchCriteria scri) throws Exception{
 			logger.info("list");
 			

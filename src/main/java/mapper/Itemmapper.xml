@@ -4,7 +4,7 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
     
     <mapper namespace="Itemmapper">
-     <select id="Item_list" parameterType="kr.koko.ex14.review.dto.SearchCriteria" resultType="kr.koko.ex14.review.dto.ItemVO">
+     <select id="Item_list" parameterType="cf.garageon.app.VO.SearchCriteria" resultType="cf.garageon.app.VO.ItemVO">
 
      SELECT  item_Number,
  				item_Name,
@@ -85,7 +85,7 @@
    </insert>
    
    <!-- 상품 상세조회 -->
-<select id="Item_read" parameterType="int" resultType="kr.koko.ex14.review.dto.ItemVO">
+<select id="Item_read" parameterType="int" resultType="cf.garageon.app.VO.ItemVO">
 		SELECT	item_Number
 			  ,item_Name
 			  ,item_Writer
@@ -102,7 +102,7 @@
 		 WHERE item_Number = #{item_Number}
 	</select>
 	
-	<update id="Item_update" parameterType="kr.koko.ex14.review.dto.ItemVO">
+	<update id="Item_update" parameterType="cf.garageon.app.VO.ItemVO">
       update  ITEM set item_Name=#{item_Name},
                            item_Writer=#{item_Writer},
                            item_Price=#{item_Price},

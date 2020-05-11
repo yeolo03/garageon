@@ -43,7 +43,7 @@
 		<div class="header-right">
 		<a href="#" class="hr-btn">Contact</a>
 		      <span>|</span>
-			<a href="#" class="hr-btn">마이페이지 </a>
+			<a href="#" class="hr-btn">mypage� </a>
 			<span>|</span>
 			<div class="user-panel">
 				<a href="" class="login">Login</a>

@@ -6,7 +6,7 @@
 
     <mapper namespace="Qnamapper">
     <!-- qna 목록 조회 -->
-    <select id="readQna" parameterType="int" resultType="kr.koko.ex14.review.dto.QnABoardVO">
+    <select id="readQna" parameterType="int" resultType="cf.garageon.app.VO.QnABoardVO">
     	SELECT * FROM QNA
 	</select>
 	
@@ -24,14 +24,14 @@
    
    </insert>
    
-   <select id="qna_read" parameterType="int"  resultType="kr.koko.ex14.review.dto.QnABoardVO">
+   <select id="qna_read" parameterType="int"  resultType="cf.garageon.app.VO.QnABoardVO">
     	SELECT
     		 *
     	 FROM QNA
     	WHERE QNA_NUMBER = #{QNA_NUMBER}
 	</select>
 	
-	<update id="qna_update" parameterType="kr.koko.ex14.review.dto.QnABoardVO">
+	<update id="qna_update" parameterType="cf.garageon.app.VO.QnABoardVO">
       update  QNA set qna_Subject=#{qna_Subject},
                            qna_Content=#{qna_Content}
                          where QNA_NUMBER=#{qna_Number}

@@ -7,7 +7,7 @@
     <mapper namespace="ReplyQnamapper">
    
   
-	<select id="qna_reply" parameterType="int"  resultType="kr.koko.ex14.review.dto.QnaReplyVO">
+	<select id="qna_reply" parameterType="int"  resultType="cf.garageon.app.VO.QnaReplyVO">
     	SELECT
     		  QNA_NUMBER,QNA_RNUMBER, QNA_DETAIL, QNA_NAME, QNA_REPLY_DATE
     	 FROM QNA_REPLY
@@ -29,7 +29,7 @@ VALUES(
 	</insert>
 	
 	<!-- 선택된 댓글 조회 -->
-	<select id="qna_reply_select" resultType="kr.koko.ex14.review.dto.QnaReplyVO">
+	<select id="qna_reply_select" resultType="kcf.garageon.app.VO.QnaReplyVO">
 		SELECT
 				QNA_NUMBER
 	, QNA_RNUMBER
@@ -41,13 +41,13 @@ VALUES(
 	</select>
 	
 	<!-- 댓글 수정 -->
-	<update id="qna_reply_update" parameterType="kr.koko.ex14.review.dto.QnaReplyVO">
+	<update id="qna_reply_update" parameterType="cf.garageon.app.VO.QnaReplyVO">
 		UPDATE QNA_REPLY SET QNA_DETAIL = #{qna_Detail}
 		WHERE QNA_RNUMBER = #{qna_rNumber}
 	</update>
 	
 	<!-- 댓글 삭제 -->
-	<delete id="qna_reply_delete" parameterType="kr.koko.ex14.review.dto.QnaReplyVO">
+	<delete id="qna_reply_delete" parameterType="cf.garageon.app.VO.QnaReplyVO">
 		DELETE FROM QNA_REPLY
 		WHERE QNA_RNUMBER = #{qna_rNumber}
 	</delete>

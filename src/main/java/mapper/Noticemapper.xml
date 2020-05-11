@@ -5,7 +5,7 @@
 
 
 <mapper namespace="Noticemapper">
-	<select id="listNotice" resultType="kr.koko.ex14.review.dto.NoticeBoardVO" parameterType="kr.koko.ex14.review.dto.SearchCriteria">
+	<select id="listNotice" resultType="cf.garageon.app.VO.NoticeBoardVO" parameterType="cf.garageon.app.VO.SearchCriteria">
 		
 		SELECT  notice_Number,
 		        notice_Subject,
@@ -42,7 +42,7 @@
 		</if>
 	</sql>
 
-<select id="readNotice" parameterType="int" resultType="kr.koko.ex14.review.dto.NoticeBoardVO">
+<select id="readNotice" parameterType="int" resultType="cf.garageon.app.VO.NoticeBoardVO">
 		select
 		notice_Number,notice_Subject,notice_Content,notice_Date,notice_Readcount,notice_Image
 		from notice

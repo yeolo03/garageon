@@ -96,7 +96,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 	// 게시판 글 작성 화면
 		@RequestMapping(value = "/board/writeView", method = RequestMethod.GET)
 		public void writeView() throws Exception{
-			logger.info("writeView");
+			logger.info("board/writeView");
 			
 		}
 		
@@ -118,7 +118,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 			vo.setReview_Image(File.separator + "imgUpload" + ymdPath + File.separator + fileName);
 			//vo.setGdsThumbImg(File.separator + "imgUpload" + ymdPath + File.separator + "s" + File.separator + "s_" + fileName);
 			service.write(vo,mul);
-			return "redirect:/list";
+			return "redirect:/board/list";
 		}
 		
 		// 게시판 목록 조회
@@ -317,7 +317,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 					qnaService.writeQna(vo);
 					
 					
-					return "redirect:/qna_list";
+					return "redirect:qna/qna_list";
 				}
 				
 				//QNA 글 작성 후 마이페이지에 보여주는 곳
@@ -359,7 +359,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 				//service.delete(boardVO.getBno());
 				qnaService.delete_qna(vo.getQna_Number());
 				//noticeService.notice_delete(vo.getNotice_Number());
-				return "redirect:/qna_list";
+				return "redirect:/qna/qna_list";
 				
 			
 			}
@@ -449,7 +449,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 				// 공지사항 게시판 글 작성 화면
 				@RequestMapping(value = "/notice/writeView", method = RequestMethod.GET)
 				public void notice_writeView() throws Exception{
-					logger.info("writeView");
+					logger.info("notice/writeView");
 					
 				}
 				
@@ -474,7 +474,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 					noticeService.notice_write(vo);
 					//service.write(boardVO,mul);
 					
-					return "redirect:/notice_list";
+					return "redirect:notice/notice_list";
 				}
 				
 				// 공지사항 게시판 조회
@@ -521,7 +521,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 					  
 					 }
 				noticeService.notice_modify(vo);
-				return "redirect:/notice_list";
+				return "redirect:notice/notice_list";
 				
 				
 			}
@@ -532,7 +532,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 		    public String notice_delete(NoticeBoardVO vo) throws Exception{
 				//service.delete(boardVO.getBno());
 				noticeService.notice_delete(vo.getNotice_Number());
-				return "redirect:/notice_list";
+				return "redirect:notice/notice_list";
 				
 			
 			}
@@ -565,7 +565,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 				itemService.item_write(vo);
 				
 				
-				return "redirect:/item_list";
+				return "redirect:items/item_list";
 			}
 			
 			// 상품등록  글 목록리스트
@@ -633,7 +633,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 						
 						
 						itemService.item_modify(vo);
-						return "redirect:/item_list";
+						return "redirect:items/item_list";
 						
 						
 					}
@@ -644,7 +644,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 						//service.delete(boardVO.getBno());
 						itemService.item_delete(vo.getItem_Number());
 						
-						return "redirect:/item_list";
+						return "redirect:items/item_list";
 						
 					
 					}

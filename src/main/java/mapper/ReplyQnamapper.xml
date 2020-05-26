@@ -29,7 +29,7 @@ VALUES(
 	</insert>
 	
 	<!-- 선택된 댓글 조회 -->
-	<select id="qna_reply_select" resultType="kcf.garageon.app.VO.QnaReplyVO">
+	<select id="qna_reply_select" resultType="cf.garageon.app.VO.QnaReplyVO">
 		SELECT
 				QNA_NUMBER
 	, QNA_RNUMBER

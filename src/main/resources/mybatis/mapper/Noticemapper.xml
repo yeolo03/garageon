@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="Noticemapper">
+	<select id="listNotice" resultType="cf.garageon.app.VO.NoticeBoardVO" parameterType="cf.garageon.app.VO.SearchCriteria">
+		
+		SELECT  notice_Number,
+		        notice_Subject,
+		        notice_Content,
+	            notice_Date,
+		      notice_Readcount
+		 FROM ( 
+		        SELECT notice_Number,
+		               notice_Subject,
+		               notice_Content,
+                                       notice_Date,notice_Readcount,
+		               ROW_NUMBER() OVER(ORDER BY notice_Number DESC) AS RNUM
+		         FROM notice
+		         where 1=1
+		         <include refid="search"></include>
+		                       ) MP
+		WHERE RNUM BETWEEN #{rowStart} AND #{rowEnd}
+		ORDER BY notice_Number DESC
+	</select>
+	
+	 <select id="listCount" resultType="int">
+		SELECT COUNT(notice_Number)
+		   FROM notice
+		   WHERE 1=1
+		<include refid="search"></include>	
+		   AND notice_Number > 0
+	</select>
+	
+	<sql id="search">
+		<if test="searchType != null">
+			<if test="searchType == 't'.toString()">AND notice_Subject LIKE '%' || #{keyword} || '%'</if>
+			<if test="searchType == 'c'.toString()">AND notice_Content LIKE '%' || #{keyword} || '%'</if>
+			<if test="searchType == 'tc'.toString()">AND (notice_Content LIKE '%' || #{keyword} || '%') or (notice_Subject LIKE '%' || #{keyword} || '%')</if>
+		</if>
+	</sql>
+
+<select id="readNotice" parameterType="int" resultType="cf.garageon.app.VO.NoticeBoardVO">
+		select
+		notice_Number,notice_Subject,notice_Content,notice_Date,notice_Readcount,notice_Image
+		from notice
+		where notice_Number=#{notice_Number}
+	</select>
+	<!-- 게시판 글 작성 -->
+	<insert id="writeNotice" parameterType="String">
+
+		insert into notice(
+		notice_Number,
+		notice_Subject,
+		notice_Content,
+		notice_Image
+		)
+		values(notice_seq.nextval
+		,#{notice_Subject}
+		,#{notice_Content}
+		,#{notice_Image}
+		)
+
+	</insert>
+	
+	<!-- 후기 게시판 글 수정 -->
+     <update id="modifyNotice" parameterType="cf.garageon.app.VO.NoticeBoardVO">
+      update notice set notice_Subject=#{notice_Subject},
+                          notice_Content=#{notice_Content},
+                         notice_Image=#{notice_Image}
+           where notice_Number=#{notice_Number}
+      </update>
+      
+      <!-- 후기게시판 글 삭제 -->
+      <delete id="deleteNotice">
+      delete from notice where notice_Number=#{notice_Number}
+   </delete>
+	
+	<!-- 후기 게시판 조회수-->
+	<update id="uphit" parameterType="int">
+	update notice set 
+	notice_Readcount=notice_Readcount+1 
+	where notice_Number=#{notice_Number}
+	</update>
+	
+</mapper>

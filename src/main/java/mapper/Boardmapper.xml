@@ -48,7 +48,7 @@
 	</sql>
 	
 	<!-- 후기게시판 상세조회 -->
-<select id="read" parameterType="int" resultType="cf.garageon.app.VO.dto.BoardVO">
+<select id="read" parameterType="int" resultType="cf.garageon.app.VO.BoardVO">
 		SELECT	BNO
 			  , TITLE
 			  , CONTENT

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="ItemReplymapper">
+    <select id="item_reply" parameterType="int"  resultType="cf.garageon.app.VO.ItemReplyVO">
+    select  item_Number,item_rNumber,item_Detail,item_reply_Writer,item_reply_Date 
+      from item_reply
+       where item_Number=#{item_Number}
+	</select>
+	
+	<insert id="item_reply_write">
+	INSERT INTO ITEM_REPLY(
+	  ITEM_NUMBER
+	, ITEM_RNUMBER
+	, ITEM_DETAIL
+	, ITEM_REPLY_WRITER
+)
+VALUES(    
+      #{item_Number}
+	, item_reply_seq.nextval
+	, #{item_Detail}
+	, #{item_reply_Writer}	)
+	</insert>
+	
+	<!-- 선택된 댓글 조회 -->
+	<select id="item_reply_select" resultType="cf.garageon.app.VO.ItemReplyVO">
+		SELECT
+	  ITEM_NUMBER
+	, ITEM_RNUMBER
+	, ITEM_DETAIL
+	, ITEM_REPLY_WRITER
+    , ITEM_REPLY_DATE
+    FROM ITEM_REPLY
+		 WHERE ITEM_RNUMBER = #{item_rNumber}
+	</select>
+	
+	<!-- 댓글 수정 -->
+	<update id="item_reply_modify" parameterType="cf.garageon.app.VO.ItemReplyVO">
+		UPDATE ITEM_REPLY SET ITEM_DETAIL = #{item_Detail}
+		WHERE ITEM_RNUMBER = #{item_rNumber}
+		
+	</update>
+	
+	<!-- 댓글 삭제 -->
+	<delete id="item_reply_delete" parameterType="cf.garageon.app.VO.ItemReplyVO">
+		DELETE FROM ITEM_REPLY
+		WHERE ITEM_RNUMBER = #{item_rNumber}
+	</delete>
+	
+	
+    </mapper>

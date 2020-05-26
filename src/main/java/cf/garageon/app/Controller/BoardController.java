@@ -60,8 +60,8 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 	ItemReplyService itemReplyService;
 	
 	
-	
-	@Resource(name="uploadPath")
+	// 보통 @Value 를 사용하여 properties 로 경로를 받습니다. (기존소스 잔재 오류로 주석)
+//	@Resource(name="uploadPath")
 	public String uploadPath;
 	
 	
@@ -440,8 +440,9 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 					pageMaker.setTotalCount(noticeService.listCount());
 					
 					model.addAttribute("pageMaker", pageMaker);
-					
-					return "notice_list";
+
+					// jsp 폴더 구조로 반영이 되지 않아 에러남 다른쪽도 모두 확인해서 고쳐주셔야 할듯 합니다.
+					return "notice/notice_list";
 					
 				}
 				

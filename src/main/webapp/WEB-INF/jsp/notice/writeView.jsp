@@ -55,7 +55,7 @@
    					}
   			});
  				</script>
- 				
+ 				-->
  				<%=request.getRealPath("/") %><br>
  				
  				<button type="submit">작성</button>
@@ -64,7 +64,7 @@
  				</tr>
  				<tr>
  	
-                  </div>-->
+                  
 								</td>
 							</tr>			
 						</tbody>			

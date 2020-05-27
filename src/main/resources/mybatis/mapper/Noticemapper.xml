@@ -44,7 +44,7 @@
 
 <select id="readNotice" parameterType="int" resultType="cf.garageon.app.VO.NoticeBoardVO">
 		select
-		notice_Number,notice_Subject,notice_Content,notice_Date,notice_Readcount,notice_Image
+		notice_Number,notice_Subject,notice_Content,notice_Date,notice_Readcount
 		from notice
 		where notice_Number=#{notice_Number}
 	</select>
@@ -54,13 +54,11 @@
 		insert into notice(
 		notice_Number,
 		notice_Subject,
-		notice_Content,
-		notice_Image
+		notice_Content
 		)
 		values(notice_seq.nextval
 		,#{notice_Subject}
 		,#{notice_Content}
-		,#{notice_Image}
 		)
 
 	</insert>
@@ -69,7 +67,7 @@
      <update id="modifyNotice" parameterType="cf.garageon.app.VO.NoticeBoardVO">
       update notice set notice_Subject=#{notice_Subject},
                           notice_Content=#{notice_Content},
-                         notice_Image=#{notice_Image}
+                         <!-- notice_Image=#{notice_Image} -->
            where notice_Number=#{notice_Number}
       </update>
       

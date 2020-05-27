@@ -457,7 +457,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 				@RequestMapping(value = "/notice/write", method = RequestMethod.POST)
 				public String notice_write(NoticeBoardVO vo,MultipartFile file/*MultipartHttpServletRequest mul*/) throws Exception{
 					logger.info("write");
-					
+					/*
 					String imgUploadPath = uploadPath + File.separator + "imgUpload";
 					String ymdPath = UploadFileUtils.calcPath(imgUploadPath);
 					String fileName = null;
@@ -470,7 +470,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 
 					vo.setNotice_Image(File.separator + "imgUpload" + ymdPath + File.separator + fileName);
 					//vo.setGdsThumbImg(File.separator + "imgUpload" + ymdPath + File.separator + "s" + File.separator + "s_" + fileName);
-					
+					*/
 					noticeService.notice_write(vo);
 					//service.write(boardVO,mul);
 					

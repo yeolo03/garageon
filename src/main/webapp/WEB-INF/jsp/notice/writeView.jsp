@@ -37,9 +37,9 @@
 							<tr>
 								
 
-								<tr>
-								<td>
-								<div class="inputArea">
+							<tr>
+							<td>
+							<!-- 	<div class="inputArea">
                         <label for="gdsImg">이미지</label>
  						<input type="file" id="notice_Image" name="file" />
  						<div class="select_img"><img src="" /></div>
@@ -64,7 +64,7 @@
  				</tr>
  				<tr>
  	
-                  </div>
+                  </div>-->
 								</td>
 							</tr>			
 						</tbody>			

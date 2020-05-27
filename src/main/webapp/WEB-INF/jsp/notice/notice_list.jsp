@@ -116,7 +116,7 @@
 								<td><c:out value="${list1.notice_Number}" /></td>
 								<td>
 								
-									<a href="/ex36/notice/readView?notice_Number=${list1.notice_Number}">${list1.notice_Subject}</a>
+									<a href="/notice/readView?notice_Number=${list1.notice_Number}">${list1.notice_Subject}</a>
 								</td>
 								<td><c:out value="관리자" /></td>
 								<td>${list1.notice_Date}</td>
@@ -124,7 +124,7 @@
 							</tr>
 						</c:forEach>
 						<tr>
-			<td colspan="7"><button class="btn btn btn-info"> <a href="/ex36/notice/writeView">글작성</a></button> </td>
+			<td colspan="7"><button class="btn btn btn-info"> <a href="/notice/writeView">글작성</a></button> </td>
 		</tr>
 					</table>
 					</div>

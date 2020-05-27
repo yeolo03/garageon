@@ -13,7 +13,7 @@
 
 		$(".cancel_btn").on("click", function() {
 			event.preventDefault();
-			location.href = "/ex36/notice_list";
+			location.href = "/notice/notice_list";
 		})
 	})
 </script>
@@ -30,7 +30,7 @@
 
 		<section id="container">
 			<form name="updateForm" role="form" method="post"
-				action="/ex36/notice_modify" enctype="multipart/form-data">
+				action="/notice/notice_modify" enctype="multipart/form-data">
 				<input type="hidden" name="notice_Number" value="${modify1.notice_Number}"
 					readonly="readonly" />
 				<table>

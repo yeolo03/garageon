@@ -13,7 +13,7 @@
 
 		$(".cancel_btn").on("click", function() {
 			event.preventDefault();
-			location.href = "/ex36/qna_list";
+			location.href = "/qna/qna_list";
 		})
 	})
 </script>

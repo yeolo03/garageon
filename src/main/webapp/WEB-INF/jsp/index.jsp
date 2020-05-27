@@ -37,7 +37,7 @@
 
 	<!-- Header section -->
 	<header class="header-section clearfix">
-		<a href="index.html" class="site-logo">
+		<a href="index" class="site-logo">
 			<img src="img/logo.png" alt="">
 		</a>
 		<div class="header-right">

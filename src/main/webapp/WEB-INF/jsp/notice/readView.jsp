@@ -25,7 +25,7 @@ $(document).ready(function() {
 		// 수정 
 		var formObj = $("form[name='readForm']");
 		$(".update_btn").on("click", function() {
-			formObj.attr("action", "/ex36/notice/modifyView");
+			formObj.attr("action", "/notice/modifyView");
 			formObj.attr("method", "get");
 			formObj.submit();
 		})
@@ -34,7 +34,7 @@ $(document).ready(function() {
 		// 삭제
 		$(".delete_btn").on("click", function() {
 			
-			  formObj.attr("action", "/ex36/notice_delete");
+			  formObj.attr("action", "/notice_delete");
 				formObj.attr("method", "post");
 				formObj.submit();
 			

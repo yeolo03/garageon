@@ -551,7 +551,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 			@RequestMapping(value="/items/write", method = RequestMethod.POST)
 			public String item_register(ItemVO vo,MultipartFile file) throws Exception {
 				logger.info("reply Write");
-				String imgUploadPath = uploadPath + File.separator + "imgUpload";
+				/*String imgUploadPath = uploadPath + File.separator + "imgUpload";
 				String ymdPath = UploadFileUtils.calcPath(imgUploadPath);
 				String fileName = null;
 
@@ -563,11 +563,11 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 
 				vo.setItem_Image(File.separator + "imgUpload" + ymdPath + File.separator + fileName);
 				vo.setItem_Thumbimage(File.separator + "imgUpload" + ymdPath + File.separator + "s" + File.separator + "s_" + fileName);
-				
+				*/
 				itemService.item_write(vo);
 				
 				
-				return "redirect:items/item_list";
+				return "redirect:/item_list";
 			}
 			
 			// 상품등록  글 목록리스트

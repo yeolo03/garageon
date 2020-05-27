@@ -14,8 +14,8 @@
 				sales_Contact,
 				sales_Kakaoid,
 				<!-- deal_location, -->
-				item_Sort,
-				item_Thumbimage
+				item_Sort
+				<!-- item_Thumbimage -->
 				
 		 FROM ( 
 		        SELECT item_Number,
@@ -26,14 +26,14 @@
 				sales_Contact,
 				sales_Kakaoid,
 				<!-- deal_location,  -->
-				item_Sort,
-				item_Thumbimage,
-		               ROW_NUMBER() OVER(ORDER BY item_Number DESC) AS RNUM
+				item_Sort
+				<!--  item_Thumbimage,
+		               ROW_NUMBER() OVER(ORDER BY item_Number DESC) AS RNUM  -->
 		         FROM item
 		         where 1=1
 		         <include refid="search"></include>
 		                       ) MP
-		WHERE RNUM BETWEEN #{rowStart} AND #{rowEnd}
+		<!-- WHERE RNUM BETWEEN #{rowStart} AND #{rowEnd} -->
 		ORDER BY item_Number DESC
      </select>
      
@@ -65,9 +65,9 @@
 				sales_Contact,
 				sales_Kakaoid,
 				<!-- deal_location,  -->
-				item_Sort,
-				item_Thumbimage,
-				item_Image
+				item_Sort
+				<!-- item_Thumbimage,
+				item_Image -->
 				)  
 	                 VALUES(   item_seq.nextval
 	                 		  , #{item_Name}
@@ -78,8 +78,8 @@
 	                 		  , #{sales_Kakaoid}
 	                 		 <!-- , #{deal_location} -->
 	                 		  , #{item_Sort}
-	                 		  , #{item_Thumbimage}
-	                 		  , #{item_Image}
+	                 		  <!-- , #{item_Thumbimage}
+	                 		  , #{item_Image} -->
 	                 		   )
    
    </insert>
@@ -96,8 +96,8 @@
 			  <!-- ,deal_location -->
 			  ,item_Sort
 			  ,item_Date
-			  ,item_Thumbimage
-				,item_Image
+			  <!-- ,item_Thumbimage
+				,item_Image -->
 		 FROM ITEM
 		 WHERE item_Number = #{item_Number}
 	</select>
@@ -110,9 +110,9 @@
                            sales_Contact=#{sales_Contact},
                            sales_Kakaoid=#{sales_Kakaoid},
                            <!-- deal_location=#{deal_location}, -->
-                           item_Sort=#{item_Sort},
-                           item_Thumbimage=#{item_Thumbimage},
-			               item_Image=#{item_Image}
+                           item_Sort=#{item_Sort}
+                           <!-- item_Thumbimage=#{item_Thumbimage},
+			               item_Image=#{item_Image} -->
   
                          where item_Number=#{item_Number}
       </update>

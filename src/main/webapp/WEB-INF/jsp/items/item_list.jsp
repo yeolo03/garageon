@@ -121,7 +121,7 @@
 						newLine++;
 						aC++;
 						%>		
-							 <td><a href="/ex36/items/item_readView?item_Number=${list.item_Number}">
+							 <td><a href="/items/item_readView?item_Number=${list.item_Number}">
 							 <img src="<c:url value='/resources/${list.item_Thumbimage}' />" class="oriImg"><br>
 							 <div class=item> ${list.item_Name}<br>
 							 ${list.item_Price}원 </a></div>

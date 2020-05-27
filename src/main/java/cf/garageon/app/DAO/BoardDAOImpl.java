@@ -6,6 +6,8 @@ import java.util.Map;
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import cf.garageon.app.VO.BoardVO;
@@ -15,8 +17,8 @@ import cf.garageon.app.VO.SearchCriteria;
 
 @Repository
 public class BoardDAOImpl implements BoardDAO{
-	@Inject
-	SqlSession sqlSession;
+	@Autowired
+	private SqlSessionTemplate sqlSession;
 
 	//후기 게시판 작성
 	@Override
@@ -59,6 +61,7 @@ public class BoardDAOImpl implements BoardDAO{
 		// TODO Auto-generated method stub
 		sqlSession.update("Boardmapper.upHit",bno);
 	}
+	/*
 	@Override
 	public void insertFile(Map<String, Object> map) throws Exception {
 		// TODO Auto-generated method stub
@@ -83,10 +86,10 @@ public class BoardDAOImpl implements BoardDAO{
 	public Map<String, Object> getByteImage() {
 		// TODO Auto-generated method stub
 		return sqlSession.selectOne("Image.getByteImage");
-
+ 
 
 	}
-	/*
+	
 	@Override
 	public void saveImage(Map<String, Object> hmap) {
 		// TODO Auto-generated method stub
@@ -100,4 +103,3 @@ public class BoardDAOImpl implements BoardDAO{
 	
 
 }
-	

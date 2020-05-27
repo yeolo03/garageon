@@ -24,7 +24,7 @@
 			
 			$(".cancel_btn").on("click", function(){
 				event.preventDefault();
-				location.href = "/ex36/board/readView?bno=${modify.bno}"
+				location.href = "/board/readView?bno=${modify.bno}"
 					   + "&page=${scri.page}"
 					   + "&perPageNum=${scri.perPageNum}"
 					   + "&searchType=${scri.searchType}"
@@ -33,7 +33,7 @@
 			
 			$(".update_btn").on("click", function(){
 				
-				formObj.attr("action", "/ex36/modify");
+				formObj.attr("action", "/modify");
 				formObj.attr("method", "post");
 				formObj.submit();
 			})
@@ -73,7 +73,7 @@
 			<hr />
 			
 			<section id="container">
-				<form name="updateForm" role="form" method="post" action="/ex36/modify" enctype="multipart/form-data">
+				<form name="updateForm" role="form" method="post" action="/modify" enctype="multipart/form-data">
 					<input type="hidden" name="bno" value="${modify.bno}" readonly="readonly"/>
 					<input type="hidden" id="page" name="page" value="${scri.page}"> 
 					<input type="hidden" id="perPageNum" name="perPageNum" value="${scri.perPageNum}"> 

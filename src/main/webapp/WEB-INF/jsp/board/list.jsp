@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+	<link href="../img/favicon.ico" rel="shortcut icon"/>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
@@ -62,8 +62,8 @@
 
 	<!-- Header section -->
 	<header class="header-section clearfix">
-		<a href="index.html" class="site-logo">
-			<img src="img/logo.png" alt="">
+		<a href="../index" class="site-logo">
+			<img src="../img/logo.png" alt="">
 		</a>
 		<div class="header-right">
 		<a href="#" class="hr-btn">Contact</a>
@@ -76,16 +76,16 @@
 			</div> 
 		</div>
 		<ul class="main-menu">
-			<li><a href="notice_list">Notice</a></li>
+			<li><a href="../notice_list">Notice</a></li>
 			<li><a href="list">Review</a></li>
 			<li><a href="#">Item</a>
 				<ul class="sub-menu">
-					<li><a href="items/item_register">Sales</a></li>
-					<li><a href="item_list">Buy</a></li>
+					<li><a href="../items/item_register">Sales</a></li>
+					<li><a href="../item_list">Buy</a></li>
 				
 				</ul>
 			</li>
-			<li><a href="qna_list">QNA</a></li>
+			<li><a href="../qna_list">QNA</a></li>
 			
 			
 			
@@ -120,7 +120,7 @@
 								<td><c:out value="${list.bno}" /></td>
 								<td>
 								
-									<a href="/ex36/board/readView?bno=${list.bno}">${list.title}</a>
+									<a href="/board/readView?bno=${list.bno}">${list.title}</a>
 								</td>
 								<td><c:out value="${list.writer}" /></td>
 								<td>${list.regdate}</td>
@@ -129,7 +129,7 @@
 						</c:forEach>
 						
 						<tr>
-			<td colspan="7"> <button class="btn btn btn-warning"><a href="/ex36/board/writeView">글작성</button></a> </td>
+			<td colspan="7"> <button class="btn btn btn-warning"><a href="/board/writeView">글작성</button></a> </td>
 		</tr>
 					</table>
 					</div>
@@ -225,7 +225,7 @@
 					</div>
 				</div>
 				<div class="col-xl-6 col-lg-5 order-lg-1">
-					<img src="img/logo.png" alt="">
+					<img src="../img/logo.png" alt="">
 					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>

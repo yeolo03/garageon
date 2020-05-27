@@ -105,7 +105,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 		public String write(BoardVO vo,MultipartHttpServletRequest mul,MultipartFile file) throws Exception{
 			logger.info("write");
 			
-			String imgUploadPath = uploadPath + File.separator + "imgUpload";
+			/*String imgUploadPath = uploadPath + File.separator + "imgUpload";
 			String ymdPath = UploadFileUtils.calcPath(imgUploadPath);
 			String fileName = null;
 
@@ -117,6 +117,8 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 
 			vo.setReview_Image(File.separator + "imgUpload" + ymdPath + File.separator + fileName);
 			//vo.setGdsThumbImg(File.separator + "imgUpload" + ymdPath + File.separator + "s" + File.separator + "s_" + fileName);
+			 */
+			 
 			service.write(vo,mul);
 			return "redirect:/board/list";
 		}
@@ -135,7 +137,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 			
 			model.addAttribute("pageMaker", pageMaker);
 			
-			return "board/list";
+			return "/board/list";
 			
 		}
 		
@@ -150,8 +152,9 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 			List<ReplyVO> replyList =replyService.readReply(boardVO.getBno());
 			model.addAttribute("replyList",replyList);
 			
-			List<Map<String, Object>> fileList = service.selectFileList(boardVO.getBno());
-			model.addAttribute("file", fileList);
+			
+			//List<Map<String, Object>> fileList = service.selectFileList(boardVO.getBno());
+			//model.addAttribute("file", fileList);
 			
 			return "board/readView";
 		}
@@ -182,9 +185,8 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 			model.addAttribute("modify", service.read(boardVO.getBno()));
 			model.addAttribute("scri", scri);
 
-			List<Map<String, Object>> fileList = service.selectFileList(boardVO.getBno());
-			model.addAttribute("file", fileList);
-			
+			//List<Map<String, Object>> fileList = service.selectFileList(boardVO.getBno());
+			//model.addAttribute("file", fileList);
 			return "board/modifyView";
 		}
 		//후기 게시판 수정
@@ -474,7 +476,7 @@ private static final Logger logger = LoggerFactory.getLogger(BoardController.cla
 					noticeService.notice_write(vo);
 					//service.write(boardVO,mul);
 					
-					return "redirect:notice/notice_list";
+					return "redirect:/notice_list";
 				}
 				
 				// 공지사항 게시판 조회

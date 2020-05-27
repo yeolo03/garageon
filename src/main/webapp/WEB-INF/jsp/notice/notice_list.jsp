@@ -74,7 +74,7 @@
 		</div>
 		<ul class="main-menu">
 			<li><a href="notice_list">Notice</a></li>
-			<li><a href="list">Review</a></li>
+			<li><a href="board/list">Review</a></li>
 			<li><a href="#">Item</a>
 				<ul class="sub-menu">
 					<li><a href="items/item_register">Sales</a></li>

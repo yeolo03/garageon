@@ -18,7 +18,7 @@
 				if(fn_valiChk()){
 					return false;
 				}
-				formObj.attr("action", "/ex36/board/write");
+				formObj.attr("action", "/board/write");
 				formObj.attr("method", "post");
 				formObj.submit();
 			});
@@ -49,7 +49,7 @@
 			<hr />
 			
 			<section id="container">
-				<form name="writeForm" method="post" action="/ex36/board/write" enctype="multipart/form-data">
+				<form name="writeForm" method="post" action="/board/write" enctype="multipart/form-data">
 					<table>
 						<tbody>
 							<tr>

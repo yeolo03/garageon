@@ -13,7 +13,7 @@
 				item_Detail,
 				sales_Contact,
 				sales_Kakaoid,
-				deal_location,
+				<!-- deal_location, -->
 				item_Sort,
 				item_Thumbimage
 				
@@ -25,7 +25,7 @@
 				item_Detail,
 				sales_Contact,
 				sales_Kakaoid,
-				deal_location,
+				<!-- deal_location,  -->
 				item_Sort,
 				item_Thumbimage,
 		               ROW_NUMBER() OVER(ORDER BY item_Number DESC) AS RNUM
@@ -64,7 +64,7 @@
 				item_Detail,
 				sales_Contact,
 				sales_Kakaoid,
-				deal_location,
+				<!-- deal_location,  -->
 				item_Sort,
 				item_Thumbimage,
 				item_Image
@@ -76,7 +76,7 @@
 	                 		  , #{item_Detail}
 	                 		  , #{sales_Contact}
 	                 		  , #{sales_Kakaoid}
-	                 		  , #{deal_location}
+	                 		 <!-- , #{deal_location} -->
 	                 		  , #{item_Sort}
 	                 		  , #{item_Thumbimage}
 	                 		  , #{item_Image}
@@ -93,7 +93,7 @@
 			  ,item_Detail
 			  ,sales_Contact
 			  ,sales_Kakaoid
-			  ,deal_location
+			  <!-- ,deal_location -->
 			  ,item_Sort
 			  ,item_Date
 			  ,item_Thumbimage
@@ -109,7 +109,7 @@
                            item_Detail=#{item_Detail},
                            sales_Contact=#{sales_Contact},
                            sales_Kakaoid=#{sales_Kakaoid},
-                           deal_location=#{deal_location},
+                           <!-- deal_location=#{deal_location}, -->
                            item_Sort=#{item_Sort},
                            item_Thumbimage=#{item_Thumbimage},
 			               item_Image=#{item_Image}

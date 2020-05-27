@@ -29,13 +29,13 @@ public class BoardServiceImpl implements BoardService{
 		@Override
 		public void write(BoardVO boardVO,MultipartHttpServletRequest mul) throws Exception {
 			dao.write(boardVO);
-			
+			/*
 			List<Map<String,Object>> list= fileUtils.parseInsertFileInfo(boardVO, mul);
 			int size=list.size();
 			for(int i=0;i<size;i++) {
 				dao.insertFile(list.get(i));
-				
-			}
+			
+			}*/
 			
 		}
 
@@ -57,7 +57,7 @@ public class BoardServiceImpl implements BoardService{
 		// TODO Auto-generated method stub
 		return dao.listCount(scri);
 	}
-
+	/*
 	@Override
 	public void modify(BoardVO boardVO, String[] files, String[] fileNames, MultipartHttpServletRequest mpRequest) throws Exception {
 		// TODO Auto-generated method stub
@@ -99,13 +99,32 @@ public class BoardServiceImpl implements BoardService{
 		// TODO Auto-generated method stub
 		return dao.selectFileInfo(map);
 	}
-/*
+
 	@Override
 	public Map<String, Object> getByteImage() {
 		// TODO Auto-generated method stub
 		return dao.getByteImage();
 	}
 */
+
+	@Override
+	public void modify(BoardVO boardVO, String[] files, String[] fileNames, MultipartHttpServletRequest mpRequest)
+			throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(int bno) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void upHit(int bno) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 	
   
 

@@ -21,7 +21,7 @@
 			<hr />
 			
 			<section id="container">
-				<form role="form" method="post" action="/ex36/items/write" enctype="multipart/form-data">
+				<form role="form" method="post" action="/items/write" enctype="multipart/form-data">
 					<table>
 						<tbody>
 							<tr>

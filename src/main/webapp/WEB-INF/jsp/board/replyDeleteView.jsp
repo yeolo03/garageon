@@ -33,7 +33,7 @@
 			<hr />
 			
 			<section id="container">
-				<form name="updateForm" role="form" method="post" action="/ex36/replyDelete">
+				<form name="updateForm" role="form" method="post" action="/replyDelete">
 					<input type="hidden" name="bno" value="${replyDelete.bno}" readonly="readonly"/>
 					<input type="hidden" id="rno" name="rno" value="${replyDelete.rno}" />
 					<input type="hidden" id="page" name="page" value="${scri.page}"> 

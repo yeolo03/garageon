@@ -52,7 +52,7 @@
 		</div>
 		<ul class="main-menu">
 			<li><a href="notice_list">Notice</a></li>
-			<li><a href="list">Review</a></li>
+			<li><a href="board/list">Review</a></li>
 			<li><a href="#">Item</a>
 				<ul class="sub-menu">
 					<li><a href="items/item_register">Sales</a></li>
@@ -77,8 +77,8 @@
 						<div class="col-lg-6">
 							<div class="hs-text">
 								<h2><span>Find</span> What you want.</h2>
-								<p>변경되나 테스트 <br> Don't hesitate you just use this webpage. </p>
-								
+								<p>my page. <br> Don't hesitate you just use this webpage. </p>
+						
 							</div>
 						</div>
 						<div class="col-lg-6">

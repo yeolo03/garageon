@@ -23,13 +23,13 @@
 $(document).ready(function() {
 		$(".replyWriteBtn").on("click", function(){
 			  var formObj1 = $("form[name='replyForm']");
-			  formObj1.attr("action", "/ex36/replyWrite");
+			  formObj1.attr("action", "/replyWrite");
 			  formObj1.submit();
 			  
 			});
 		//댓글 수정 View
 		$(".replyUpdateBtn").on("click", function(){
-			location.href = "/ex36/replyUpdateView?bno=${read.bno}"
+			location.href = "/replyUpdateView?bno=${read.bno}"
 				+ "&page=${scri.page}"
 				+ "&perPageNum=${scri.perPageNum}"
 				+ "&searchType=${scri.searchType}"
@@ -39,7 +39,7 @@ $(document).ready(function() {
 		});
 		//댓글 삭제 View
 		$(".replyDeleteBtn").on("click", function(){
-			location.href = "/ex36/replyDeleteView?bno=${read.bno}"
+			location.href = "/replyDeleteView?bno=${read.bno}"
 				+ "&page=${scri.page}"
 				+ "&perPageNum=${scri.perPageNum}"
 				+ "&searchType=${scri.searchType}"
@@ -50,7 +50,7 @@ $(document).ready(function() {
 		// 수정 
 		var formObj = $("form[name='readForm']");
 		$(".update_btn").on("click", function() {
-			formObj.attr("action", "/ex36/board/modifyView");
+			formObj.attr("action", "/board/modifyView");
 			formObj.attr("method", "get");
 			formObj.submit();
 		})
@@ -59,7 +59,7 @@ $(document).ready(function() {
 		// 삭제
 		$(".delete_btn").on("click", function() {
 			
-			  formObj.attr("action", "/ex36/delete");
+			  formObj.attr("action", "/delete");
 				formObj.attr("method", "post");
 				formObj.submit();
 			
@@ -71,7 +71,7 @@ $(document).ready(function() {
 function fn_fileDown(fileNo){
 			var formObj = $("form[name='readForm']");
 			$("#FILE_NO").attr("value", fileNo);
-			formObj.attr("action", "/ex36/fileDown");
+			formObj.attr("action", "/fileDown");
 			formObj.submit();
 		}
 		

@@ -26,7 +26,7 @@ $(document).ready(function() {
 		// 수정 
 		var formObj = $("form[name='readForm']");
 		$(".update_btn").on("click", function() {
-			formObj.attr("action", "/ex36/items/item_modifyView");
+			formObj.attr("action", "/items/item_modifyView");
 			formObj.attr("method", "get");
 			formObj.submit();
 		})
@@ -35,7 +35,7 @@ $(document).ready(function() {
 		// 삭제
 		$(".delete_btn").on("click", function() {
 			
-			  formObj.attr("action", "/ex36/items/item_delete");
+			  formObj.attr("action", "/items/item_delete");
 				formObj.attr("method", "post");
 				formObj.submit();
 			
@@ -44,20 +44,20 @@ $(document).ready(function() {
 		
 		$(".replyWriteBtn").on("click", function(){
 			  var formObj1 = $("form[name='replyForm']");
-			  formObj1.attr("action", "/ex36/item_reply_witer");
+			  formObj1.attr("action", "/items/item_reply_witer");
 			  formObj1.submit();
 			  
 			});
 		
 		//댓글 삭제 View
 		$(".replyDeleteBtn").on("click", function(){
-			location.href = "/ex36/items/item_replyDeleteView?=${read.item_Number}"
+			location.href = "/items/item_replyDeleteView?=${read.item_Number}"
 				+ "&item_rNumber="+$(this).attr("data-item_rNumber");
 		});
 
 		//댓글 수정 View
 		$(".replyUpdateBtn").on("click", function(){
-			location.href = "/ex36/items/item_replyUpdateView?=${read.item_Number}"
+			location.href = "/items/item_replyUpdateView?=${read.item_Number}"
 				+ "&item_rNumber="+$(this).attr("data-item_rNumber");
 		});
 		
@@ -67,7 +67,7 @@ $(document).ready(function() {
 function fn_fileDown(fileNo){
 			var formObj = $("form[name='readForm']");
 			$("#FILE_NO").attr("value", fileNo);
-			formObj.attr("action", "/ex36/fileDown");
+			formObj.attr("action", "/fileDown");
 			formObj.submit();
 		}
 		*/

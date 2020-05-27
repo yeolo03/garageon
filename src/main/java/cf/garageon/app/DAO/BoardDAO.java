@@ -25,7 +25,8 @@ public interface BoardDAO {
 	public void delete(int bno) throws Exception;
 	
 	public void upHit(int bno) throws Exception;
-
+	
+	/*
 	//첨부파일 업로드
 	public void insertFile(Map<String, Object> map) throws Exception;
 	//첨부파일 조회
@@ -37,7 +38,7 @@ public interface BoardDAO {
 	public void updateFile(Map<String, Object> map) throws Exception;
 	
 	public Map<String, Object> getByteImage();
-/*
+	
 	public void saveImage(Map<String, Object> hmap);
 
 	*/

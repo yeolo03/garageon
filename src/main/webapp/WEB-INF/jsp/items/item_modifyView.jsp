@@ -30,7 +30,7 @@
 
 		<section id="container">
 			<form name="updateForm" role="form" method="post"
-				action="/ex36/items/item_modify" enctype="multipart/form-data">
+				action="/items/item_modify" enctype="multipart/form-data">
 				<input type="hidden" name="item_Number" value="${modify.item_Number}"
 					readonly="readonly" />
 				<table>
